@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;6 00&family=Roboto:wght@600&display=swap');
+body {
+  margin: 0;
+  font-size: 14px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.nav-item{
+  color : black;
+}
+
+.navbar-brand{
+  color: black;
+}
+
+h1{
+  font-size: 16px !important;
+}
+
+.color-muted{
+  color: gray;
+}
+select{
+  border-color: gray !important;
+}
+select.form-select {
+  font-size: 14px !important; /* Adjust the font size as needed */
+  padding: 0.25rem; /* Adjust the padding as needed */
+}
+.btn{
+  display : flex !important;
+  background-color: green !important;
+  color:white !important;
+  width: 100% !important;
+}
+
+.card-title {
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  height: 3rem;
+  margin-bottom: 0.5rem; /* Add some bottom margin for spacing */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.card-title,
+.card-text,
+.form-label,
+.form-select {
+  text-align: left;
+}
+.card-text{
+  font-size: 12px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  height: 3.5rem; /* Adjust the height based on your preference */
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
