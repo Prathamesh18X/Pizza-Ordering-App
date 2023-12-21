@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { action } from '../states/index'
+import { useDispatch } from 'react-redux'
 
 export default function Pizza({ pizza }) {
+  const dispatch = useDispatch()
   const [variant, setVariant] = useState("small");
   const [quantity, setQuantity] = useState(0);
   const [showQuantityButtons, setShowQuantityButtons] = useState(false);
 
   const incrementQuantity = () => {
+    dispatch(action.add(1))
     setQuantity((prevQuantity) => prevQuantity + 1);
     if (!showQuantityButtons) {
       setShowQuantityButtons(true);
@@ -13,6 +17,7 @@ export default function Pizza({ pizza }) {
   };
 
   const decrementQuantity = () => {
+    dispatch(action.minus(1))
     if (quantity > 0) {
       setQuantity((prevQuantity) => prevQuantity - 1);
     }
