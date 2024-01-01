@@ -13,15 +13,12 @@ export default function Homescreen() {
   }, [dispatch]);
 
   return (
-    <div>
-      <div className="row justify-content-center">
-        {loading ? (
-          <h1>Loading...</h1>
-        ) : error ? (
-          <h1>Something Went Wrong...</h1>
-        ) : (
+    <div className="col-lg-8">
+      <div className="row justify-content-center mx-1">
+        {loading ? (<h1>Loading...</h1>) : error ? (<h1>Something Went Wrong...</h1>) : 
+        (
           pizzas.map((pizza) => (
-            <div key={pizza._id} className="col-md-5">
+            <div key={pizza._id} className="p-2 col-md-6">
               <Pizza pizza={pizza} />
             </div>
           ))

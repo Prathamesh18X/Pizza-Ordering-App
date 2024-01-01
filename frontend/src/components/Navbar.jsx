@@ -14,10 +14,10 @@ export default function Navbar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav ml-left">
               <li className="nav-item px-2">
-                Login 
+                <button className='btn'>Login</button> 
               </li>
               <li className="nav-item">
-                Cart = {quantity}
+                <button className='btn' >Cart = {quantity}</button>
               </li>
             </ul>
           </div>

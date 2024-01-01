@@ -29,10 +29,10 @@ export default function Pizza({ pizza }) {
 
   const showAddButton = !showQuantityButtons && quantity === 0;
   return (
-    <div className="card mb-3 shadow">
+    <div className="card shadow-sm">
       <div className="row g-0">
         
-        <div className="col-md-8">
+        <div className="col-md-7">
           <div className="card-body">
             <h5 className="card-title">{pizza.name}</h5>
             <p className="card-text text-muted">{pizza.description}</p>
@@ -54,14 +54,16 @@ export default function Pizza({ pizza }) {
             <span className="fw-semibold fs-5">₹{pizza.prices[variant]}</span>
           </div>
         </div>
-        <div className="col-md-4 position-relative">
+        <div className="col-md-5 position-relative">
+          <div className="d-flex align-items-center justify-content-center ">
           <img
             src={pizza.image}
-            className="img-fluid"
+            className="img-fluid p-2"
             alt={pizza.name}
             style={{ height: "180px", objectFit: "cover" }}
           />
-          <div className="position-absolute bottom-15 start-50 translate-middle-x d-flex align-items-center">
+          </div>
+          <div className="position-absolute bottom-15 start-50 translate-middle-x d-flex align-items-center justify-content-center ">
             {showAddButton && (
               <button
                 className="btn btn-success mx-2"
@@ -78,7 +80,7 @@ export default function Pizza({ pizza }) {
                 >
                   -
                 </button>
-                <span className="mx-2">{quantity}</span>
+                <span className="mx-2r">{quantity}</span>
                 <button
                   className="btn btn-outline-secondary mx-2"
                   onClick={incrementQuantity}
