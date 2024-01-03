@@ -1,33 +1,37 @@
 import React, { useState } from "react";
-import { action } from '../states/index'
-import { useDispatch } from 'react-redux'
+import { add,minus,addToCart } from '../states/actions/cartActions';
+import { useDispatch } from 'react-redux';
 
 export default function Pizza({ pizza }) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [variant, setVariant] = useState("small");
   const [quantity, setQuantity] = useState(0);
-  const [showQuantityButtons, setShowQuantityButtons] = useState(false);
+  // const [showQuantityButtons, setShowQuantityButtons] = useState(false);
+function addtocart(){
+  dispatch(addToCart(pizza , quantity , variant))
+}
+  // function incrementClick(){
+  //   dispatch(add(1));
+  //   dispatch(addToCart(pizza, quantity, variant));
+  //   setQuantity((prevQuantity) => prevQuantity + 1);
+  //   if (!showQuantityButtons) {
+  //     setShowQuantityButtons(true);
+  //   }
+  // }
 
-  const incrementQuantity = () => {
-    dispatch(action.add(1))
-    setQuantity((prevQuantity) => prevQuantity + 1);
-    if (!showQuantityButtons) {
-      setShowQuantityButtons(true);
-    }
-  };
+  // function decrementClick(){
+  //   dispatch(minus(1));
+  //   dispatch(addToCart(pizza, quantity, variant));
+  //   if (quantity > 0) {
+  //     setQuantity((prevQuantity) => prevQuantity - 1);
+  //   }
+  //   if (quantity === 1) {
+  //     setShowQuantityButtons(false);
+  //   }
+  // }
 
-  const decrementQuantity = () => {
-    dispatch(action.minus(1))
-    if (quantity > 0) {
-      setQuantity((prevQuantity) => prevQuantity - 1);
-    }
-    if (quantity === 1) {
-      setShowQuantityButtons(false);
-    }
-  };
-  console.log(pizza); // Log pizza object to the console
+  // const showAddButton = !showQuantityButtons && quantity === 0;
 
-  const showAddButton = !showQuantityButtons && quantity === 0;
   return (
     <div className="card shadow-sm">
       <div className="row g-0">
@@ -64,10 +68,18 @@ export default function Pizza({ pizza }) {
           />
           </div>
           <div className="position-absolute bottom-15 start-50 translate-middle-x d-flex align-items-center justify-content-center ">
+          <button
+                className="btn btn-success mx-2"
+                onClick={addtocart}
+              >
+                <span className="px-2">Cart+</span>
+              </button>
+          </div>
+          {/* <div className="position-absolute bottom-15 start-50 translate-middle-x d-flex align-items-center justify-content-center ">
             {showAddButton && (
               <button
                 className="btn btn-success mx-2"
-                onClick={incrementQuantity}
+                onClick={incrementClick}
               >
                 <span className="px-2">Add+</span>
               </button>
@@ -76,20 +88,20 @@ export default function Pizza({ pizza }) {
               <>
                 <button
                   className="btn btn-outline-secondary mx-2"
-                  onClick={decrementQuantity}
+                  onClick={decrementClick}
                 >
                   -
                 </button>
                 <span className="mx-2r">{quantity}</span>
                 <button
                   className="btn btn-outline-secondary mx-2"
-                  onClick={incrementQuantity}
+                  onClick={incrementClick}
                 >
                   +
                 </button>
               </>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

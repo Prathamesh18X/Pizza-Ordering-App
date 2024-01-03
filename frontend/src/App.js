@@ -2,7 +2,7 @@ import './App.css';
 import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './components/Navbar';
 import Homescreen from './screens/Homescreen';
-import Checkout from './components/Checkout';
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navbar/>
       <div className='row justify-content-center'>
         <Homescreen/>
-        <Checkout/>
+        <Cart/>
       </div>
     </div>
   );
