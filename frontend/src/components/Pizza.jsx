@@ -33,7 +33,9 @@ function addtocart(){
   // const showAddButton = !showQuantityButtons && quantity === 0;
 
   return (
+    
     <div className="card shadow-sm">
+      {console.log(pizza)}
       <div className="row g-0">
         
         <div className="col-md-7">

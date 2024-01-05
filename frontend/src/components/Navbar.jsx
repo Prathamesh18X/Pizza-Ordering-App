@@ -28,7 +28,12 @@ export default function Navbar() {
               <button className="btn">Login</button>
             </li>
             <li className="nav-item">
-              <button className="btn">Cart = {/*quantityState*/} {cartState.cartItem.length}</button>
+              <a href="/cart">
+                <div>
+                <button className="btn">Cart = {/*quantityState*/} {cartState.cartItems.length}</button>
+                </div>
+              </a>
+              
             </li>
           </ul>
         </div>

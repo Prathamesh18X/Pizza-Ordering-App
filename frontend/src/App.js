@@ -2,16 +2,20 @@ import './App.css';
 import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './components/Navbar';
 import Homescreen from './screens/Homescreen';
-import Cart from './components/Cart';
-
+import Cartscreen from './screens/Cartscreen';
+import {BrowserRouter as Router, Route ,Routes } from 'react-router-dom'
 function App() {
   return (
     <div>
+      
+      <Router>
       <Navbar/>
-      <div className='row justify-content-center'>
-        <Homescreen/>
-        <Cart/>
-      </div>
+        <Routes>
+        <Route path='/' exact element={<Homescreen/>}/>
+        <Route path="/cart" exact element={<Cartscreen/>} />
+        </Routes>
+      </Router>
+        
     </div>
   );
 }

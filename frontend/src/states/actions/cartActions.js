@@ -1,3 +1,4 @@
+
 export const add = (amount) =>{
     return (dispatch)=>{
         dispatch({
@@ -18,7 +19,7 @@ export const minus = (amount) =>{
     
 }
 
-export const addToCart = (pizza , quantity , variant)=>{
+export const addToCart = (pizza , quantity , variant)=>(dispatch,getState)=>{
 
     var cartItem = {
         name : pizza.name,
@@ -30,11 +31,8 @@ export const addToCart = (pizza , quantity , variant)=>{
     }
     
     
-        return(dispatch)=>{
-            dispatch({
-            type: 'ADD_TO_CART',
-            payload : cartItem
-        })
+            dispatch({type: 'ADD_TO_CART',payload : cartItem})
+
+            const cartItems = getState().cartReducers.cartItems
+            localStorage.setItem('cartItems' , JSON.stringify(cartItems))
         }
-    
-    }

@@ -12,7 +12,7 @@
 // }
 
 const initialState = {
-    cartItem: []
+    cartItems: []
   }
   
   export const cartReducers = (state = initialState, action) => {
@@ -20,7 +20,7 @@ const initialState = {
       case 'ADD_TO_CART':
         return {
           ...state,
-          cartItem: [...state.cartItem, action.payload],
+          cartItems: [...state.cartItems, action.payload],
         }
   
       default: return state;
