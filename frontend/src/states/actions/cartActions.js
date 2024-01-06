@@ -24,6 +24,7 @@ export const addToCart = (pizza , quantity , variant)=>(dispatch,getState)=>{
     var cartItem = {
         name : pizza.name,
         _id : pizza.id,
+        image : pizza.image,
         variant : variant,
         prices : pizza.prices,
         quantity : quantity,

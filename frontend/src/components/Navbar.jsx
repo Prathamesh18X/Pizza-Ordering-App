@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   //const quantityState = useSelector((state) => state.cartReducers);
@@ -10,7 +11,7 @@ export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
-        <div>La pino'z</div>
+        <div><Link className='' to="/">La pino'z</Link></div>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,14 +26,12 @@ export default function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav ml-left">
             <li className="nav-item px-2">
-              <button className="btn">Login</button>
+              <Link to={"/auth"} className="btn">Login</Link>
             </li>
             <li className="nav-item">
-              <a href="/cart">
-                <div>
-                <button className="btn">Cart = {/*quantityState*/} {cartState.cartItems.length}</button>
-                </div>
-              </a>
+              <Link to="/cart" className='btn'>
+              Cart = {/*quantityState*/} {cartState.cartItems.length}
+              </Link>
               
             </li>
           </ul>

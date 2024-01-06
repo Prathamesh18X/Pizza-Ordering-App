@@ -5,32 +5,32 @@ import { useDispatch } from 'react-redux';
 export default function Pizza({ pizza }) {
   const dispatch = useDispatch();
   const [variant, setVariant] = useState("small");
-  const [quantity, setQuantity] = useState(0);
-  // const [showQuantityButtons, setShowQuantityButtons] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [showQuantityButtons, setShowQuantityButtons] = useState(false);
 function addtocart(){
-  dispatch(addToCart(pizza , quantity , variant))
+  dispatch(addToCart(pizza ,quantity, variant))
 }
-  // function incrementClick(){
-  //   dispatch(add(1));
-  //   dispatch(addToCart(pizza, quantity, variant));
-  //   setQuantity((prevQuantity) => prevQuantity + 1);
-  //   if (!showQuantityButtons) {
-  //     setShowQuantityButtons(true);
-  //   }
-  // }
+  function incrementClick(){
+    dispatch(add(1));
+    dispatch(addToCart(pizza, quantity, variant));
+    setQuantity((prevQuantity) => prevQuantity + 1);
+    if (!showQuantityButtons) {
+      setShowQuantityButtons(true);
+    }
+  }
 
-  // function decrementClick(){
-  //   dispatch(minus(1));
-  //   dispatch(addToCart(pizza, quantity, variant));
-  //   if (quantity > 0) {
-  //     setQuantity((prevQuantity) => prevQuantity - 1);
-  //   }
-  //   if (quantity === 1) {
-  //     setShowQuantityButtons(false);
-  //   }
-  // }
+  function decrementClick(){
+    dispatch(minus(1));
+    dispatch(addToCart(pizza, quantity, variant));
+    if (quantity > 0) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+    if (quantity === 1) {
+      setShowQuantityButtons(false);
+    }
+  }
 
-  // const showAddButton = !showQuantityButtons && quantity === 0;
+  const showAddButton = !showQuantityButtons && quantity === 1;
 
   return (
     
@@ -69,15 +69,15 @@ function addtocart(){
             style={{ height: "180px", objectFit: "cover" }}
           />
           </div>
-          <div className="position-absolute bottom-15 start-50 translate-middle-x d-flex align-items-center justify-content-center ">
+          {/* <div className="position-absolute bottom-15 start-50 translate-middle-x d-flex align-items-center justify-content-center ">
           <button
                 className="btn btn-success mx-2"
                 onClick={addtocart}
               >
                 <span className="px-2">Cart+</span>
               </button>
-          </div>
-          {/* <div className="position-absolute bottom-15 start-50 translate-middle-x d-flex align-items-center justify-content-center ">
+          </div> */}
+          <div className="position-absolute bottom-15 start-50 translate-middle-x d-flex align-items-center justify-content-center ">
             {showAddButton && (
               <button
                 className="btn btn-success mx-2"
@@ -94,7 +94,7 @@ function addtocart(){
                 >
                   -
                 </button>
-                <span className="mx-2r">{quantity}</span>
+                <span className="mx-2r">{quantity-1}</span>
                 <button
                   className="btn btn-outline-secondary mx-2"
                   onClick={incrementClick}
@@ -103,7 +103,7 @@ function addtocart(){
                 </button>
               </>
             )}
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

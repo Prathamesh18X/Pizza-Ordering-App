@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from "../components/Navbar";
 import { useSelector } from 'react-redux';
 
 export default function Cartscreen() {
@@ -6,17 +7,19 @@ export default function Cartscreen() {
   const cartItems = cartState.cartItems
   return (
     <div>
-      <div className="text-center">My cart</div>
+      <Navbar />
       {console.log(cartItems) }
+      <h2 className="text-center">My cart</h2>
       <div className="container">
-        <table className="table ">
+        <table className="table text-center ">
           <thead className='text-success fs-4'>
             <tr>
               <th scope='col'>#</th>
               <th scope='col'>Pizza Name</th>
               <th scope='col'>Quantity</th>
               <th scope='col'>Variant</th>
-              <th scope='col'>Amount{"($)"}</th>
+              <th scope='col'>Amount</th>
+              <th scope='col'>Update</th>
             </tr>          
           </thead>
           <tbody>
@@ -26,7 +29,8 @@ export default function Cartscreen() {
               <td>{pizza.name}</td>
               <td>{pizza.quantity}</td>
               <td>{pizza.variant}</td>
-              <td>{pizza.prices.variant}</td>
+              <td>${pizza.price}</td>
+              <td></td>
             </tr>)
               ))}
           </tbody>

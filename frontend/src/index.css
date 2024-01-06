@@ -9,6 +9,9 @@
   color: black;
 }
 
+.title{
+  font-size: 64px;
+}
 h1{
   font-size: 16px !important;
 }
@@ -23,6 +26,8 @@ select.form-select {
   font-size: 14px !important; /* Adjust the font size as needed */
   padding: 0.25rem; /* Adjust the padding as needed */
 }
+
+
 .btn{
   display : flex !important;
   background-color: green !important;
