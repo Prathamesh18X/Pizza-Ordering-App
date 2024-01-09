@@ -1,16 +1,3 @@
-// export const  cartReducers = (state = 0 , action)=>{
-//     if(action.type === 'ADD'){
-//         return state + action.payload;
-//     }
-//     else if(action.type === 'MINUS'){
-//         const result = state - action.payload;
-//         return Math.max(result, 0);
-//     }
-//     else{
-//         return state
-//     }
-// }
-
 const initialState = {
     cartItems: []
   }
@@ -18,11 +5,23 @@ const initialState = {
   export const cartReducers = (state = initialState, action) => {
     switch (action.type) {
       case 'ADD_TO_CART':
-        return {
-          ...state,
-          cartItems: [...state.cartItems, action.payload],
+        const alreadyExist = state.cartItems.find(item => item.name === action.payload.name)
+        if(alreadyExist){
+          return{
+            ...state,
+            cartItems : state.cartItems.map(item => item.name === action.payload.name ? action.payload : item)
+          }
+        }else{
+          return {
+            ...state,
+            cartItems: [...state.cartItems, action.payload],
+          }
         }
-  
+        case 'REMOVE_FROM_CART':
+          return{
+            ...state,
+            cartItems : state.cartItems.filter(item =>item.name !== action.payload.name)
+          }
       default: return state;
     }
   }  

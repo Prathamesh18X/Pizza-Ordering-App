@@ -29,10 +29,10 @@ select.form-select {
 
 
 .btn{
+  text-justify: center !important;
   display : flex !important;
   background-color: green !important;
   color:white !important;
-  width: 100% !important;
 }
 
 .card-title {

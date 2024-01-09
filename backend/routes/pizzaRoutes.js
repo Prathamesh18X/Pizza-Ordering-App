@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const Pizza = require('../models/pizzaModels')
+const pizza = require('../models/pizzaModel')
 
 router.get("/getpizzas", async (req, res) => {
     try {
-      const pizzas = await Pizza.find({});
+      const pizzas = await pizza.find({});
       res.send(pizzas);
     } catch (error) {
       return res.status(400).json({

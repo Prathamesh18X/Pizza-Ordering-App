@@ -1,8 +1,8 @@
 const express = require("express");
 const db = require('./pizzaDB');
 const app = express();
-const pizza = require('./models/pizzaModels');
 const pizzasRoute = require('./routes/pizzaRoutes')
+const userRoute = require('./routes/userRoutes')
 
 app.use(express.json());
 
@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 const port = process.env.PORT || 8000;
 
 app.use('/api/pizzas/' , pizzasRoute)
+app.use('/api/users/' , userRoute)
 
 // app.get("/getdata", (req, res) => {
 //   pizza.find({})

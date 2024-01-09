@@ -16,7 +16,7 @@ export default function Homescreen() {
   return (
     <div className="">
       <Navbar />
-      <div className="row justify-content-center mx-5">
+      <div className="row justify-content-center m-5">
         {loading ? (<h1>Loading...</h1>) : error ? (<h1>Something Went Wrong...</h1>) : 
         (
           pizzas.map((pizza) => (
