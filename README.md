@@ -23,7 +23,7 @@ User Registration
 ![image](https://github.com/Prathamesh18X/Pizza-Ordering-App/assets/109477390/838129fa-9495-4f1a-a458-a74ebe3c319a)
 MongoDB Compass User database entry
 
-![image](https://github.com/Prathamesh18X/Pizza-Ordering-App/assets/109477390/a7833fc5-8019-45f9-842d-349396285439)
+![image](https://github.com/Prathamesh18X/Pizza-Ordering-App/assets/109477390/d441196e-d86a-4dd8-b626-6c49503fd728)
 Pizza Store Menu for Pizza selections
 
 ![image](https://github.com/Prathamesh18X/Pizza-Ordering-App/assets/109477390/6ee497b5-996e-4cbe-a435-a47a7b953731)
