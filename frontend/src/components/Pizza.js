@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping ,faPlus} from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { add, minus, addToCart } from "../states/actions/cartActions";
 import { useDispatch } from "react-redux";
 
@@ -10,7 +10,7 @@ export default function Pizza({ pizza }) {
   const [quantity, setQuantity] = useState(0);
   const [showQuantityButtons, setShowQuantityButtons] = useState(false);
   function addtocart() {
-    if(quantity > 0){
+    if (quantity > 0) {
       dispatch(addToCart(pizza, quantity, variant));
     }
   }
@@ -40,7 +40,7 @@ export default function Pizza({ pizza }) {
       <div className="row g-0">
         <div className="col-md-7">
           <div className="card-body">
-            <h5 className="card-title">{pizza.name}</h5>
+            <h5 className=" title-primary">{pizza.name}</h5>
             <p className="card-text text-muted">{pizza.description}</p>
             <div className="d-flex  mb-1">
               <div className="form-label m-0 px-2 text-center">
@@ -70,24 +70,31 @@ export default function Pizza({ pizza }) {
                     </option>
                   ))}
                 </select> */}
-              {showAddButton && (
-              <button className="btn btn-sm fw-bold" onClick={incrementClick}>
-               Add <FontAwesomeIcon className="pt-1 px-1" icon={faPlus} />
-              </button>
-              )}
-              {showQuantityButtons && (
-                <div className="d-flex">
-                  <button 
-                    className="btn btn-sm fw-bold" onClick={decrementClick}>
-                    -
-                  </button>
-                  <span className="mx-2 fw-bold">{quantity}</span>
+                {showAddButton && (
                   <button
-                    className="btn btn-sm fw-bold" onClick={incrementClick}>
-                    +
+                    className="btn btn-sm fw-bold"
+                    onClick={incrementClick}
+                  >
+                    Add <FontAwesomeIcon className="pt-1 px-1" icon={faPlus} />
                   </button>
-                </div>
-              )}
+                )}
+                {showQuantityButtons && (
+                  <div className="d-flex">
+                    <button
+                      className="btn btn-sm fw-bold"
+                      onClick={decrementClick}
+                    >
+                      -
+                    </button>
+                    <span className="mx-2 fw-bold">{quantity}</span>
+                    <button
+                      className="btn btn-sm fw-bold"
+                      onClick={incrementClick}
+                    >
+                      +
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
             <span className="fw-bold fs-5">₹{pizza.prices[variant]}</span>

@@ -10,7 +10,6 @@ function App() {
   return (
     <div>
       <Router>
-        
         <Routes>
           <Route path="/" element={<Homescreen />} />
           <Route path="/store" exact element={<Storescreen />} />

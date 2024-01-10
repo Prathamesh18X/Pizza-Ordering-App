@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {useDispatch , useSelector} from 'react-redux'
+import {useDispatch } from 'react-redux'
 import {registerUser} from '../states/actions/userAction'
 export default function Login() {
   const [name, setName] = useState("");

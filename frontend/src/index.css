@@ -1,47 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;6 00&family=Roboto:wght@600&display=swap');
-
-
-.nav-item{
-  color : black;
-}
-
-.navbar-brand{
-  color: black;
-}
-
-.title{
+.title {
   font-size: 64px;
 }
-h1{
+
+h1 {
   font-size: 16px !important;
 }
 
-.color-muted{
+.color-muted {
   color: gray;
 }
-select{
+
+select {
   border-color: gray !important;
 }
+
 select.form-select {
-  font-size: 14px !important; /* Adjust the font size as needed */
-  padding: 0.25rem; /* Adjust the padding as needed */
+  font-size: 14px !important;
+  padding: 0.25rem;
 }
 
 
-.btn{
+.btn {
   text-justify: center !important;
-  display : flex !important;
+  display: flex !important;
   background-color: green !important;
-  color:white !important;
+  color: white !important;
 }
 
-.card-title {
+.title-primary {
   font-weight: 800;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
   height: 3rem;
-  margin-bottom: 0.5rem; /* Add some bottom margin for spacing */
+  margin-bottom: 0.5rem;
 }
 
 .card-body {
@@ -57,18 +50,20 @@ select.form-select {
 .form-select {
   text-align: left;
 }
-.card-text{
+
+.card-text {
   font-size: 12px !important;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
-  height: 3.5rem; /* Adjust the height based on your preference */
+  height: 3.5rem;
 }
+
 .card-img-top {
   height: 200px;
   object-fit: cover;
 }
 
-.cart-title{
+.cart-title {
   font-weight: 800;
 }
