@@ -1,14 +1,14 @@
 # Pizza Store : Food Delivery App
 This is a web application for food delivery, It has feature like User Authentication (Login , Registration), Pizza Selection from store menu, and ordering pizza after checkout with selected pizzas.<br>
 
-##Tech Used :<br>
-Javascript
-React JS
-Redux
-Boostrap
-Node JS
-Express JS
-Mongo DB
+## Tech Used :<br>
+Javascript<br>
+React JS<br>
+Redux<br>
+Boostrap<br>
+Node JS<br>
+Express JS<br>
+Mongo DB<br>
 
 ## Preview of Website:<br>
 ![image](https://github.com/Prathamesh18X/Pizza-Ordering-App/assets/109477390/fceeb843-33e7-4d85-a400-94de2b003c05)
@@ -30,11 +30,3 @@ Pizza Store Menu for Pizza selections
 CartItem for selected pizzas and Checkout Summary
 ![image](https://github.com/Prathamesh18X/Pizza-Ordering-App/assets/109477390/88554c98-4f5d-4fcd-b4aa-33aa5e85bafa)
 if Cart is Empty
-
-
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
