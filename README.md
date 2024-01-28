@@ -1,5 +1,6 @@
 # Pizza Store : Food Delivery App
 This is a web application for food delivery, It has feature like User Authentication (Login , Registration), Pizza Selection from store menu, and ordering pizza after checkout with selected pizzas.<br>
+[Go Live](https://pizza-ordering-app-vert.vercel.app/)
 
 ## Tech Used :<br>
 Javascript<br>
