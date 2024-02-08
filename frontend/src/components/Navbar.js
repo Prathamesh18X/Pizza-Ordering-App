@@ -9,7 +9,6 @@ export default function Navbar() {
   const cartState = useSelector((state) => state.cartReducers);
   const userState = useSelector((state) => state.loginUserReducers);
   const { currentUser } = userState;
-
   const dispatch = useDispatch();
   return (
     <div className="w-100 fixed-top">

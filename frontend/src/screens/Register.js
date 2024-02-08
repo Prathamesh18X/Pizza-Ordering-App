@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {useDispatch } from 'react-redux'
+import {useDispatch , useSelector} from 'react-redux'
 import {registerUser} from '../states/actions/userAction'
 export default function Login() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCPassword] = useState("");
+  const {loading , success , error} = useSelector((state) => state.registerUserReducers)
 
   const dispatch = useDispatch();
   function registerClick(){
@@ -23,6 +24,7 @@ export default function Login() {
   return (
     <div className="col d-flex justify-content-center ">
       <div className="d-flex card shadow flex-column my-5 p-4 w-25">
+        {success ? "sucessful reg" :""}
         <h1 className="text-center fw-bold fs-2">REGISTER</h1>
         <div className="mb-2 fw-bold">
           Username

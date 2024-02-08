@@ -26,7 +26,8 @@ router.post("/login", async(req,res) => {
             res.send(currentUser);
         }
     } catch (error) {
-        return res.status(400).json({message: error})
+        console.log("got error");
+        return res.status(404).json({message: error})
     }
 })
 

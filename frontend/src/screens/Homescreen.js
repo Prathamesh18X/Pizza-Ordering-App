@@ -37,7 +37,7 @@ export default function Homescreen() {
                 to="/register"
                 className="btn px- fw-bold rounded-pill btn-lg"
               >
-                Register / Signup
+                Login/Register 
                 <FontAwesomeIcon className="p-2" icon={faArrowRight} />
               </Link>
             </div>

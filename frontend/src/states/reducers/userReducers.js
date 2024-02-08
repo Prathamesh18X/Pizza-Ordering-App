@@ -1,3 +1,4 @@
+console.log("reducer :");
 export const registerUserReducers = (state = {}, action) => {
   switch (action.type) {
     case "USER_REGISTER_REQUEST": {
@@ -21,9 +22,11 @@ export const loginUserReducers = (state ={},action) => {
       return {loading :true}
     }
     case "USER_LOGIN_SUCCESS": {
-      return { loading: false, success: true, currentUser: action.payload }
+      return { loading: false, success: true, currentUser: action.payload  }
     }
+    
     case "USER_LOGIN_FAILED": {
+      // console.log("failer bro");
       return { loading: false ,error:action.payload };
     }
     default:{
