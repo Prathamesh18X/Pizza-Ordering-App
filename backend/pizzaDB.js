@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 // Connecting string
-const mongoURL = 'mongodb://localhost:27017/mern-pizza';
+const mongoURL = 'mongodb+srv://Prathamesh18X:Akcc&52426@cluster0.lywr1lt.mongodb.net/mern-pizza';
 
 mongoose.connect(mongoURL);
 
