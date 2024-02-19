@@ -46,5 +46,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://pizza-ordering-app-server.vercel.app/"
+  "proxy": "https://pizza-ordering-app-server.vercel.app"
 }
