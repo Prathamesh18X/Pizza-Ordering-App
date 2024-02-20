@@ -2,34 +2,24 @@ const express = require("express");
 const cors = require('cors');
 const db = require('./pizzaDB');
 const app = express();
-const pizzasRoute = require('./routes/pizzaRoutes')
-const userRoute = require('./routes/userRoutes')
-const port = 8000
+const pizzasRoute = require('./routes/pizzaRoutes');
+const userRoute = require('./routes/userRoutes');
+const port = 8000;
 
-
-//Plugin middlewares
+// Enable CORS for all routes
 app.use(cors());
+
+// Parse JSON request body
 app.use(express.json());
 
-// Restrict CORS to a specific origin
-// const corsOptions = {
-//   origin: ['https://pizzas-store.vercel.app/'],
-//   methods: ["POST","GET"],
-//   Credentials:true
-// };
-
-app.use(cors(corsOptions));
-//testing
+// Define a route for testing
 app.get("/", (req, res) => {
   res.send("Server working with status 200");
 });
 
-
-//All routes
-app.use('/api/pizzas/' , pizzasRoute)
-app.use('/api/users/' , userRoute)
-
-
+// Routes for pizzas and users
+app.use('/api/pizzas/', pizzasRoute);
+app.use('/api/users/', userRoute);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
