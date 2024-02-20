@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Restrict CORS to a specific origin
 const corsOptions = {
-  origin: ['https://https://pizza-ordering-app-server.vercel.app/'],
+  origin: ['https://pizzas-store.vercel.app/'],
   methods: ["POST","GET"],
   Credentials:true
 };
